@@ -1,0 +1,174 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>lanca-idf</Name>
+    <RootNamespace>lanca-idf</RootNamespace>
+    <SaveNodeJsSettingsInProjectFile>True</SaveNodeJsSettingsInProjectFile>
+    <ScriptArguments>
+    </ScriptArguments>
+    <NodejsPort>
+    </NodejsPort>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>e4d80f7f-adb5-4efb-9be9-7e1dcd14713c</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>electron/electron.js</StartupFile>
+    <StartWebBrowser>False</StartWebBrowser>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <StartWebBrowser>False</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="build_start.js" />
+    <Content Include="dev_start.bat">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="dev_start.js" />
+    <Content Include="driver\geckodriver.exe" />
+    <Content Include="electron\electron.js" />
+    <Content Include="electron\listenerCreator.js" />
+    <Content Include="electron\versao.js" />
+    <Content Include="package.json" />
+    <Content Include="pre_configuracao.bat" />
+    <Content Include="public\error.html" />
+    <Content Include="public\index.html" />
+    <Content Include="README.md" />
+    <Content Include="src\App.css" />
+    <Content Include="src\App.js" />
+    <Content Include="src\components\DropItemModalPerfil\configuracaoTable.js" />
+    <Content Include="src\components\DropItemModalPerfil\index.js" />
+    <Content Include="src\components\DropItemModalPerfil\styles.css" />
+    <Content Include="src\components\DropItemModalPerfil\variaveisPerfil.js" />
+    <Content Include="src\components\DropItemModalUsuario\index.js" />
+    <Content Include="src\components\DropItemModalUsuario\styles.css" />
+    <Content Include="src\components\Footer\index.js" />
+    <Content Include="src\components\Footer\styles.css" />
+    <Content Include="src\components\HeaderNav\index.js" />
+    <Content Include="src\components\HeaderNav\styles.css" />
+    <Content Include="src\components\HeaderNav\usuarioVariaveis.js" />
+    <Content Include="src\components\HeaderProfile\index.js" />
+    <Content Include="src\components\HeaderProfile\styles.css" />
+    <Content Include="src\components\Layout\index.js" />
+    <Content Include="src\components\Layout\styles.css" />
+    <Content Include="src\components\Line\index.js" />
+    <Content Include="src\components\Line\styles.css" />
+    <Content Include="src\components\NavMenuHeader\index.js" />
+    <Content Include="src\components\NavMenuHeader\styles.css" />
+    <Content Include="src\components\RoboComponents\Button\index.js" />
+    <Content Include="src\components\RoboComponents\Button\styled.js" />
+    <Content Include="src\components\RoboComponents\Footer\index.js" />
+    <Content Include="src\components\RoboComponents\Footer\styled.js" />
+    <Content Include="src\components\RoboComponents\Layout\index.js" />
+    <Content Include="src\components\RoboComponents\Layout\styled.js" />
+    <Content Include="src\components\RoboComponents\LoadScreen\index.js" />
+    <Content Include="src\components\RoboComponents\LoadScreen\styled.js" />
+    <Content Include="src\components\RoboComponents\Log\index.js" />
+    <Content Include="src\components\RoboComponents\Log\styled.js" />
+    <Content Include="src\components\RoboComponents\Menu\index.js" />
+    <Content Include="src\components\RoboComponents\Menu\styled.js" />
+    <Content Include="src\components\RoboComponents\PopupInformativo\index.js" />
+    <Content Include="src\components\RoboComponents\PopupInformativo\styled.js" />
+    <Content Include="src\components\RoboComponents\ReadMe\index.js" />
+    <Content Include="src\components\RoboComponents\ReadMe\styled.js" />
+    <Content Include="src\components\RoboComponents\Title\index.js" />
+    <Content Include="src\components\RoboComponents\Title\Petrobras Sans.woff" />
+    <Content Include="src\components\RoboComponents\Title\petrobrassans_bd-webfont.woff" />
+    <Content Include="src\components\RoboComponents\Title\petrobrassans_xbd-webfont.woff" />
+    <Content Include="src\components\RoboComponents\Title\styles.css" />
+    <Content Include="src\components\RoboComponents\TopBar\index.js" />
+    <Content Include="src\components\RoboComponents\TopBar\styled.js" />
+    <Content Include="src\components\Title\index.js" />
+    <Content Include="src\components\Title\styles.css" />
+    <Content Include="src\fonts\Petrobras Sans.woff" />
+    <Content Include="src\fonts\petrobrassans_bd-webfont.woff" />
+    <Content Include="src\fonts\petrobrassans_xbd-webfont.woff" />
+    <Content Include="src\fonts\Segoe UI.ttf" />
+    <Content Include="src\icons\bookmark.svg" />
+    <Content Include="src\icons\fita.js" />
+    <Content Include="src\icons\procurar.js" />
+    <Content Include="src\icons\search.svg" />
+    <Content Include="src\images\error-robo.svg" />
+    <Content Include="src\images\header-image.svg" />
+    <Content Include="src\images\icon-app.png" />
+    <Content Include="src\images\icon-notify.png" />
+    <Content Include="src\images\icon-robo.svg" />
+    <Content Include="src\images\icon-tray.png" />
+    <Content Include="src\images\icon-tray1.png" />
+    <Content Include="src\images\icon.svg" />
+    <Content Include="src\images\icon2.png" />
+    <Content Include="src\images\icon\icon.ico" />
+    <Content Include="src\images\icon\icon.png" />
+    <Content Include="src\images\logo_inovação.png" />
+    <Content Include="src\images\logo_petrobras.png" />
+    <Content Include="src\images\petrobras.png" />
+    <Content Include="src\images\robo-error.PNG" />
+    <Content Include="src\images\user.png" />
+    <Content Include="src\index.js" />
+    <Content Include="src\pages\Robo\configuracaoTable.js" />
+    <Content Include="src\pages\Robo\index.js" />
+    <Content Include="src\pages\Robo\statusContratoTable.js" />
+    <Content Include="src\pages\Robo\statusParametroTable.js" />
+    <Content Include="src\pages\Robo\styled.js" />
+    <Content Include="src\pages\Robo\styles.css" />
+    <Content Include="src\pages\Robo\versao.js" />
+    <Content Include="src\routes.js" />
+    <Content Include="src\ScriptIDF\factory.js" />
+    <Content Include="src\ScriptIDF\rpa.js" />
+    <Content Include="src\ScriptIDF\starterRPA.js" />
+    <Content Include="src\services\errorMessage.js" />
+    <Content Include="src\services\excel.js" />
+    <Content Include="src\services\icp.js" />
+    <Content Include="src\services\progressCalculator.js" />
+    <Content Include="src\services\statusRelatorio.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="driver\" />
+    <Folder Include="electron\" />
+    <Folder Include="public\" />
+    <Folder Include="src\" />
+    <Folder Include="src\components\" />
+    <Folder Include="src\components\DropItemModalPerfil\" />
+    <Folder Include="src\components\DropItemModalUsuario\" />
+    <Folder Include="src\components\Footer\" />
+    <Folder Include="src\components\HeaderNav\" />
+    <Folder Include="src\components\HeaderProfile\" />
+    <Folder Include="src\components\Layout\" />
+    <Folder Include="src\components\Line\" />
+    <Folder Include="src\components\NavMenuHeader\" />
+    <Folder Include="src\components\RoboComponents\" />
+    <Folder Include="src\components\RoboComponents\Button\" />
+    <Folder Include="src\components\RoboComponents\Footer\" />
+    <Folder Include="src\components\RoboComponents\Layout\" />
+    <Folder Include="src\components\RoboComponents\LoadScreen\" />
+    <Folder Include="src\components\RoboComponents\Log\" />
+    <Folder Include="src\components\RoboComponents\Menu\" />
+    <Folder Include="src\components\RoboComponents\PopupInformativo\" />
+    <Folder Include="src\components\RoboComponents\ReadMe\" />
+    <Folder Include="src\components\RoboComponents\Title\" />
+    <Folder Include="src\components\RoboComponents\TopBar\" />
+    <Folder Include="src\components\Title\" />
+    <Folder Include="src\fonts\" />
+    <Folder Include="src\icons\" />
+    <Folder Include="src\images\" />
+    <Folder Include="src\images\icon\" />
+    <Folder Include="src\pages\" />
+    <Folder Include="src\pages\Robo\" />
+    <Folder Include="src\ScriptIDF\" />
+    <Folder Include="src\services\" />
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
+</Project>

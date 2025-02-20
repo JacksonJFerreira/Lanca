@@ -1,0 +1,88 @@
+{
+  "name": "SAP_Script_Web",
+  "version": "1.0.0",
+  "description": "Script de automatização de rotina de ações no ambiente Sap WebDynpro.",
+  "main": "electron/electron.js",
+  "homepage": "./",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "rescripts test",
+    "eject": "react-scripts eject",
+    "dev": "concurrently \" set BROWSER=none && npm run start\" \"wait-on http://localhost:3000 && electron .\"",
+    "postinstall": "electron-builder install-app-deps",
+    "electron-build": "electron-builder -w -c.extraMetadata.main=build/electron/electron.js",
+    "-electron-build": "robocopy ./electron build/electron && robocopy ./src build/src",
+    "electron-start": "electron .",
+    "dev-start": "concurrently \"set BROWSER=none && npm run start\" \"wait-on http://localhost:3000 &&  npm run watch-dev",
+    "electron-dev-old": "concurrently \"set BROWSER=none&& npm run start\" \"wait-on http://localhost:3000 && electron .\"",
+    "package": "electron-builder --win",
+    "pack": "electron-packager . idf_auto_app --platform=win32 --arch=x64",
+    "watch-dev": "nodemon --watch * --exec electron ."
+  },
+  "author": "@PETROBRAS PGDO/PMF - INOV",
+  "license": "ISC",
+  "build": {
+    "appId": "rpa-inov",
+    "productName": "Lança IDF",
+    "win": {
+      "target": [
+        {
+          "target": "zip",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "./build/src/images/icon/icon.ico"
+    },
+    "files": [
+      "build/**/*",
+      "build/icon.*",
+      "package.json"
+    ],
+    "directories": {
+      "buildResources": "./build/src/images/icon/icon.ico"
+    }
+  },
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "electron-is-dev": "^1.2.0",
+    "exceljs": "^4.1.1",
+    "moment": "^2.29.1",
+    "node-notifier": "^8.0.0",
+    "react": "^16.12.0",
+    "react-bootstrap": "^1.0.0-beta.17",
+    "react-bootstrap-table-next": "^4.0.0",
+    "react-bootstrap-table2-filter": "^1.3.1",
+    "react-bootstrap-table2-paginator": "^2.1.2",
+    "react-bootstrap-table2-toolkit": "^2.1.2",
+    "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "^3.4.3",
+    "selenium-webdriver": "^4.0.0-alpha.7",
+    "styled-icons": "^10.47.0"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "create-react-app": "^3.4.1",
+    "electron": "^10.4.7",
+    "electron-builder": "^22.8.1",
+    "electron-debug": "^3.2.0",
+    "electron-packager": "^15.2.0",
+    "nodemon": "^2.0.7",
+    "wait-on": "^5.2.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
